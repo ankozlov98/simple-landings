@@ -1,0 +1,263 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+            
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+
+
+
+            
+            body {
+                font-family: 'Noto Sans KR';
+                font-size: 1rem;
+                font-weight: 300;
+                line-height: 120%;
+                color: rgb(211, 209, 209);
+                margin: auto;
+                cursor: url(https://image.flaticon.com/icons/svg/723/723955.svg), default;
+                }
+
+            body::before {
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                content: '';
+                position: fixed;
+                background-image: linear-gradient(
+                75deg,
+                 rgba(255, 192, 56, 0.288),
+                 rgba(17, 2, 36, 0.712)),
+                url(https://i.pinimg.com/originals/b4/e1/49/b4e149c26f49a0bf46f43c266e6cee13.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+            header {
+                text-align: center;
+                
+                width: 100%;
+                background-image: linear-gradient( 90deg, rgba(243, 222, 30, 0.541) 20%, 30% , rgba(16, 8, 26, 0.8) 80%);
+                box-shadow: 0 30px 60px  rgba(16, 8, 26, 0.8);
+                
+            }
+            .form-group p {
+                margin: -5px 0 ;
+            }
+            
+
+            #title {
+                font-size: 1.3rem;
+                padding-top: 1rem;
+            }
+            #description {
+                font-size: 1.1rem;
+                padding-top: -0.5rem;
+                padding-bottom: 2rem;
+            }
+            
+            #survey-form {
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(10, 1, 22, 0.808);
+                line-height: 3rem;
+                margin: 30px auto;
+                border-radius: 0.2rem;
+                padding-bottom: 3rem;
+                width: 70%
+                
+            }
+            .form-group {
+               display: flex;
+               flex-direction: column;
+               justify-content: flex-start;
+               margin: 1vh 3vw 0vh 3vw;
+            }
+            .inputin {
+                margin-bottom: -1vh;
+                border-radius: 0.4rem;
+                height: 1.5rem;
+                width: 90%;
+
+            }
+
+            label {
+                font-weight: 800;
+            }
+
+            .form-group .box-label {
+                align-items: flex-start;
+                margin: -10px 0;
+            }
+            .form-group .box-label .input-radio {
+                margin: 0 0;
+            }
+            .form-group p {
+                margin-top: 5px;
+                font-weight: 800;}
+
+                .form-group #ac {
+                align-self: center;
+                font-size: 110%;
+                font-weight: 800;}
+
+            .form-group .form-control {
+                margin-bottom: -1vh;
+                border-radius: 0.4rem;
+                height: 1.5rem;
+                width: 90%;
+            }
+            
+            .form-group #textarea {
+                margin-bottom: -1vh;
+                border-radius: 0.4rem;
+                height: 10rem;
+                width: 90%;
+                font-family: 'Noto Sans KR';
+
+            }
+
+            button {
+                background:rgba(10, 1, 22, 1);
+                margin: 20px 0px;
+                width: 40%;
+                height: 10vh;
+                align-self: center;
+                color: whitesmoke;
+                font-weight: 800;
+                font-family: 'Noto Sans KR' ;
+                font-size: 2.25rem;
+            }
+            
+            button:hover {
+                background:rgb(102, 96, 109);
+                color:rgba(10, 1, 22, 1);
+
+            }
+            @media (max-width: 720px) {
+                header {
+                    height: 14vh;
+                }
+                #description {
+                    padding-bottom: -0.8rem;
+                
+                }
+                #survey-form {
+                    width: 100%;
+                    margin: 30px 0;
+                  
+                }
+                .form-group {
+                    width: 100%;
+                }
+
+            }
+            
+            
+           
+        </style>
+    </head>
+    <body>
+        <main id="container">
+            <header>
+                <h1 id="title"> SURVEY FORM</h1>
+                <p id="description">CHOOSE THE COUNTRY YOU WANT TO BE A PART OF</p>
+            </header>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label">Name</label>
+                    <input id="name" type="text" class="inputin" placeholder="enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label id="email-label">E-mail</label>
+                    <input id="email" type="email" class="inputin" placeholder="enter your email" required>
+
+                </div>
+                <div class="form-group">
+                    <label id="number-label">Age (not mandatory)</label>
+                    <input id="number" type="number" min="14" max="105" class="inputin" placeholder="enter your age">
+
+                </div>
+                <div class="form-group">
+                    <p>Sex</p>
+                    <label class="box-label">
+                        <input name="user-sex"
+                        value="male"
+                        type="radio"
+                        class="input-radio"
+                        checked> male
+                    </label>
+                    <label class="box-label">
+                        <input name="user-sex"
+                        value="female"
+                        type="radio"
+                        class="input-radio"
+                        > female
+                    </label>
+                    <label class="box-label">
+                        <input name="user-sex"
+                        value="undiscovered"
+                        type="radio"
+                        class="input-radio"
+                        > undiscovered
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>Level of your education</p>
+                    <select id="dropdown" name="role" class="form-control" required>
+                        <option disabled selected value>Select current level</option>
+                        <option value="es">Elementary school</option>
+                        <option value="ms">Middle school</option>
+                        <option value="hs">High school</option>
+                        <option value="he">College (Uni)</option>
+                        <option value="other">Other</option>
+                      </select>
+                </div>
+                <div class="form-group">
+                    <p>Prior experience</p>
+                    <label class="box-label">
+                        <input name="exp"
+                        value="biz"
+                        type="checkbox"
+                        class="input-checkbox"
+                        checked> Business
+                    </label>
+                    <label class="box-label">
+                        <input name="exp"
+                        value="tour"
+                        type="checkbox"
+                        class="input-checkbox"
+                        > Tourism
+                    </label>
+                    <label class="box-label">
+                        <input name="user-sex"
+                        value="none"
+                        type="checkbox"
+                        class="input-checkbox"
+                        > None
+                    </label>
+
+                </div>
+                <div class="form-group">
+                    <p id="ac">Additional commentary</p>
+                    <textarea 
+                    id="textarea"
+                    name="textarea" 
+                    class="inputin"
+                    > Write down any useful information</textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">
+                      Submit
+                    </button>
+                </div>
+            </form>
+          </main>
+    </body>
+</html>

@@ -1,0 +1,543 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Sarabun', sans-serif;
+                display: flex;
+                flex-direction: row;
+                font-weight: 600;
+            }
+            nav {
+                font-family: 'Ubuntu', sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: fixed;
+                width: 30vw;
+                height: 100vh;
+                font-size: 16px;
+                border-right: solid;
+                border-width: 3px;
+                margin-top: 0px;
+            }
+            #plot-list {
+                list-style: none;
+                border-top: solid;
+                border-width: 2px;
+                padding-right: 10px;
+                margin-top: 0px;
+                padding-left: 6px;
+                line-height: 6vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+            #list-header {
+                
+                width: 30vw;
+                line-height: 8vh;
+                font-size: 28px;
+                font-weight: 600;
+                margin: 0;
+                padding-right: 10px;
+                text-align: center;
+            }
+            #plot-list li {
+                
+                border-bottom: solid;
+                border-width: 2px;
+                
+            }
+            #plot-list li:hover {
+                background-color: rgb(182, 179, 179);
+                cursor: pointer;
+            }
+
+            .first-li {
+                font-weight: 600;
+                padding-left: 15px;
+            }
+            .second-li {
+                padding-left: 25px;
+            }
+            main {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                align-content: flex-start;
+                margin-left: 32vw;
+                width: 65%;
+                margin-right: 0px;
+            }
+
+            .article-header {
+                font-size: 26px;
+                font-weight: bold;
+                line-height: 10vh;
+                align-self: flex-start;
+                padding-left: 15px;
+            }
+            .text {
+                font-weight: 500;
+                text-indent: 15px;
+            }
+            .bold-text {
+                font-weight: bolder;
+                font-size: 20px;
+                padding-bottom: -5px;
+            }
+            .article-list {
+                padding-left: 40px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+            strong {
+                font-weight: bold;
+            }
+            .border-text {
+                border-style: solid;
+                border-width: 2px;
+                margin: 30px 20px;
+                align-self: center;
+                padding: 10px 20px;
+            }
+            div {
+                font-size: 18px;
+                font-weight: 600;
+            }
+            table, th, td {
+                width: 80%;
+                margin: 20px auto;
+                border: 1px solid;
+                padding: 0;
+                border-spacing: 0px;
+
+            }
+            table {
+                table-layout: fixed;
+            }
+            th, td {
+                line-height: 24px;
+
+            }
+            .recipe {
+
+            }
+            code {
+                align-self: center;
+                font-family: sans-serif;
+                padding: 10px;
+                line-height: 20px;
+            }
+            .recipe-header {
+                text-align: center;
+            }
+            .elements {
+                border-style: none;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            @media (max-width: 720px) {
+                body {
+                    flex-direction: column;
+                }
+                nav {
+                    position: fixed;
+                    width: 95vw;
+                    height: 30vh;
+                    border-bottom: solid;
+                    border-width: 5px;
+                    background-color: rgb(255, 253, 253);
+                    margin-top: -10px;
+                }
+                #list-header {
+                    text-align: center;
+                    width: 100%;
+                    height: auto;
+                }
+                #plot-list li {
+                    border-bottom: solid;
+                    border-width: 2px;
+                    padding-bottom: 0;
+                    width: 100%;
+                
+            }
+            #plot-list {
+                width: 95%;
+            }
+            main {
+                margin-top: 30vh;
+                position: relative;
+                width: 95%;
+                margin-left: 10px;
+                z-index: -1;
+            }
+            .article-header {
+                text-align: center;
+                align-self: center;
+                
+            }
+            }
+        </style>
+    </head>
+    <body>
+
+        
+        <nav id="navbar">
+            <header id="list-header">
+            CROCK POT OWNER'S GUIDE
+            </header>
+            <ul id="plot-list">
+                <a class="nav-link" href="#IMPORTANT_SAFEGUARDS"><li class="first-li"><a class="nav-link" href="#IMPORTANT_SAFEGUARDS">IMPORTANT SAFEGUARDS</li></a>
+                
+                <li class="first-li"><a class="nav-link" href="#CROCK-POT®_SLOW_COOKER_COMPONENTS">CROCK-POT® SLOW COOKER COMPONENTS</a></li>
+                <li class="first-li"><a class="nav-link"  href="#PREPARING_YOUR_CROCK-POT®_SLOW_COOKER_FOR_USE">PREPARING YOUR CROCK-POT® SLOW COOKER FOR USE</a></li>
+                <li class="first-li"><a class="nav-link" href="#FOR_CROCK-POT®_SLOW_COOKERS_WITH_HINGED_LID">FOR CROCK-POT® SLOW COOKERS WITH HINGED LID</a></li>
+                <li class="first-li"><a class="nav-link" href="#HOW_TO_USE_YOUR_SLOW_COOKER">HOW TO USE YOUR SLOW COOKER</a></li>
+                
+                <li class="first-li"><a class="nav-link" href="#HOW_TO_CLEAN_YOUR_SLOW_COOKER">HOW TO CLEAN YOUR SLOW COOKER</a></li>
+                <li class="first-li"><a class="nav-link" href="#HINTS_AND_TIPS">HINTS AND TIPS</a></li>
+                <li class="first-li"><a class="nav-link" href="#CONTACTS">CONTACTS</a></li>
+                <li class="first-li"><a class="nav-link" href="#RECIPES">RECIPES</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="IMPORTANT_SAFEGUARDS">
+            <header class="article-header" id="1">IMPORTANT SAFEGUARDS</header>
+        
+            <article class="article-content">
+                <p class="text bold-text">When using electrical appliances, basic safety precautions should always be followed to reduce the risk of fire, electric shock, and/or injury to persons including the following:</p>
+                <ol class="article-list">
+                    <li>Read all instructions before using this product</li>
+                    <li>This appliance generates heat during use. Do not touch hot surfaces. Use handles or knobs</li>
+                    <li>To protect against electric shock, do not place or immerse cord, plugs, or appliance in water or other liquid.</li>
+                    <li>This appliance is not to be used by children or by persons with reduced physical, sensory or mental capabilities.</li>
+                    <li>Close supervision is necessary when any appliance is used near children. Children should not play with the appliance</li>
+                    <li>Unplug from outlet when not in use, before putting on or taking off parts and before cleaning. Allow to cool before putting on or taking off parts, and before cleaning. To disconnect, turn any control to OFF, then unplug power cord from outlet. Do not disconnect by pulling on cord.</li>
+                    <li>Do not operate any appliance with a damaged cord or plug or after the appliance malfunctions, or has been damaged in any manner. Do not attempt to replace or splice a damaged cord. Return appliance to the manufacturer (see warranty) for examination, repair or adjustment.</li>
+                    <li>The use of accessory attachments not recommended by the appliance manufacturer may cause injuries.</li>
+                    <li>Do not use outdoors or for commercial purposes</li>
+                    <li>Do not let cord hang over edge of table or counter, or touch hot surfaces</li>
+                    <li>Do not place on or near wet surfaces, or heat sources such as a hot gas or electric burner, or in a heated oven</li>
+                    <li>Extreme caution must be used when moving an appliance containing hot oil or other hot liquids.</li>
+                    <li>The heating base is subject to residual heat from cooking cycle. Do not touch heating base immediately after removing stoneware. Allow to cool before handling.</li>
+                    <li>Use caution when opening the lid during or after a cooking cycle. Escaping steam can cause burns.</li>
+                    <li>Do not use appliance for other than intended use. Misuse can cause injuries</li>
+                    <li>Intended for household countertop use only. Keep 6 inches (152 mm) clear from the wall and on all sides. Always use appliance on a dry, stable, level surface.</li>
+                    <li>Avoid sudden temperature changes, such as adding refrigerated foods or cold liquids into a heated pot.</li>
+                    <li>The slow cooker lid is made of tempered glass. Always inspect the lid for chips, cracks or any other damage. Do not use the glass lid if it is damaged, as it may shatter during use.</li>
+                    <li><u>CAUTION:</u> To protect again electrical shock and product damage, do not cook directly in the heating base. Cook only in the stoneware provided.</li>
+                    <li><u>WARNING:</u> Spilled food can cause serious burns. Keep appliance and cord away from children. Never drape cord over edge of counter, never use outlet below counter, and never use with an extension cord. </li>
+                    <li>Never attempt to lift or carry this appliance by the lid handle. Always use the handles located at each side on the base of the appliance</li>
+                    <li>Do not lock the lid while cooking. Locking the glass lid while cooking may lead to glass breakage, which can cause injuries.</li>
+                </ol>
+                <p class="bold-text" style="text-align: center;">SAVE THESE INSTRUCTIONS
+                    HOUSEHOLD USE ONLY</p>
+                <div class="border-text text"> <p style="text-align: center; text-decoration: underline; margin-bottom: -10px;">POLARISED PLUG</p><br> This appliance has a polarized plug (one blade is wider than the other). To reduce the risk of electric shock, this plug is intended to fit into a polarized outlet only one way. If the plug does not fit fully into the outlet, reverse the plug. If it still does not fit, contact a qualified electrician. Do not attempt to modify the plug in any way. If the plug fits loosely into the AC outlet or if the AC outlet feels warm do not use that outlet.</div>
+                <div class="text"><p id="POWER_CORD_INSTRUCTIONS" style="text-align: center; text-decoration: underline; margin-bottom: 10px; font-weight: 800;">POWER CORD INSTRUCTIONS</p> A short power-supply cord is used to reduce the risk resulting from it being grabbed by children, becoming entangled in, or tripping over a longer cord</div>   
+                <p id="NOTICES" style="text-align: center; text-decoration: underline; margin-bottom: 10px; font-weight: 800;">NOTICES</p>
+                <p class="text">
+                    <ol class="article-list">
+                        <li>Some countertop and table surfaces are not designed to withstand the prolonged heat generated by certain appliances. Do not set the heated unit on a finished wood table. We recommend placing a hot pad or trivet under your slow cooker to prevent possible damage to the surface</li>
+                        <li>During initial use of this appliance, some slight smoke and/or odor may be detected. This is normal with many heating appliances and will not recur after a few uses</li>
+                        <li>Please use caution when placing your stoneware on a ceramic or smooth glass cook top stove, countertop, table or other surface. Due to the nature of the stoneware, its rough bottom may scratch some surfaces if caution is not used. Always place heat resistant protective padding under the stoneware before setting on a table, countertop or other surface.</li>
+                    </ol>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="CROCK-POT®_SLOW_COOKER_COMPONENTS">
+            <header class="article-header" id="2">CROCK-POT® SLOW COOKER COMPONENTS</header>
+            <article>
+                <img style="justify-self: center; width: 30%; margin-left: 250px" src="https://www.researchgate.net/publication/319116412/figure/fig1/AS:527460627173376@1502767821047/the-technological-scheme-of-the-thermoelectric-vacuum-crock-pot-The-main-objectives_Q640.jpg">
+                <br>
+            </article>
+        </section>
+        <section class="main-section" id="PREPARING_YOUR_CROCK-POT®_SLOW_COOKER_FOR_USE">
+            <header class="article-header" id="3">PREPARING YOUR CROCK-POT® SLOW COOKER FOR USE</header>
+            <article>
+                <p class="text">Before you use your slow cooker, remove all packaging components
+                    and wash the lid and cooking pot with warm soapy water and dry
+                    thoroughly.</p>
+                <p class="bold-text" style="text-align: center;">Assembly</p>
+                <ol class="article-list">
+                    <li>Place cooking pot into the heating base.</li>
+                    <li>Lower the lid horizontally down onto the stoneware.</li>
+                </ol>
+            </article>
+        </section>    
+        <section class="main-section" id="FOR_CROCK-POT®_SLOW_COOKERS_WITH_HINGED_LID">
+            <header class="article-header" id="4">FOR CROCK-POT® SLOW COOKERS WITH HINGED LID</header>
+            <article>
+                <ul>
+                    <li>Be sure to align the lid hinge so that it slides down onto the mating heating base hinge. </li>
+                    <li>When raising and lowering the lid, use the lid lifting handle.</li>
+                </ul>
+                <p><u>Caution:</u> When disassembling, ALWAYS remove the lid first, and then remove the stoneware.</p>
+                <ul>
+                    <li>To remove lid, use both hands to gently lift up and remove.</li>
+
+                </ul>
+            </article>
+        </section>
+        
+        <section class="main-section" id="HOW_TO_USE_YOUR_SLOW_COOKER">
+            <header class="article-header" id="5">HOW TO USE YOUR SLOW COOKER</header>
+            <article >
+                <ol class="article-list">
+                    <li>Place the stoneware into the heating base, add your ingredients to the stoneware, and cover with the lid</li>
+                    <li>Plug in your Crock-Pot® slow cooker and select the temperature setting from the three setting options. Low is recommended for slow “all-day” cooking. One hour on High is equivalent to approximately 1½ to 2 hours on Low. Refer to your specific recipe for more precise cook times. Warm is ONLY for keeping already cooked food at the perfect serving temperature until you are ready to eat. DO NOT cook on the Warm setting.</li>
+                   <p><u>NOTE:</u> We do not recommend using the Warm setting for more than 4 hours</p> 
+                    <li>When cooking is done, unplug your slow cooker and allow it to cool before cleaning.</li>
+                </ol>
+                <p style="text-align: center; text-decoration: underline; margin-bottom: 10px; font-weight: 800;">USAGE NOTES</p>
+                <ul>
+                    <li>If you suspect that the power has gone out during the day, the food may be unsafe to eat. If you are unaware of how long the power was out, we suggest you discard the food inside.</li>
+                    <li>For recipes that require a range of times, select the time closest to the setting on your slow cooker. For instance, to cook a recipe calling for a cooking time of 7 to 9 hours on Low, set your slow cooker to 8 hours.</li>
+                    <li>To avoid over or under-cooking, always fill the stoneware ½ to ¾ full to conform to recommended cook times (with the exception of certain cakes and custards, and as guided otherwise in our slow cooker recipes).</li>
+                    <li>Do not overfill stoneware. To prevent spillover, do not fill stoneware higher than ¾ full.</li>
+                    <li>Always cook, with the lid on, for the recommended time. Do not remove the lid during the first two hours of cooking.</li>
+                    <li>Always wear oven mitts when handling the lid or stoneware.</li>
+                    <li>Unplug when cooking is done and before cleaning.</li>
+                    <li>Removable stoneware is ovenproof and microwave safe. Do not use removable stoneware on gas or electric burner or under broiler. Refer to chart below.</li>
+                </ul>
+                <table>
+                    <thead>
+                        <th>Part</th>
+                        <th>Dishwasher Safe</th>
+                        <th>Oven Safe</th>
+                        <th>Microwave Safe</th>
+                        <th>Stovetop Safe</th>
+                    </thead>
+                    <tr>
+                        <td>Lid</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Stoneware</td>
+                        <td>Yes</td>
+                        <td>Yes, but not in the broiler</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <section class="main-section" id="HOW_TO_CLEAN_YOUR_SLOW_COOKER">   
+            <header class="article-header" id="6">HOW TO CLEAN YOUR SLOW COOKER</header>
+            <article>
+                <ul>
+                    <li>ALWAYS turn your slow cooker off, unplug it from the electrical outlet, and allow it to cool before cleaning.</li>
+                    <li>The lid and stoneware are dishwasher-safe. See above chart. Do not use abrasive cleaning compounds or scoruing pads. A cloth, sponge, or rubber spatula will usually remove residue. To remove water spots and other stains, use a non-abrasive cleaner or vinegar</li>
+                    <li>As with any fine ceramic, the stoneware and lid will not withstand sudden temperature changes. Do not wash the stoneware or lid with cold water when they are hot.</li>
+                    <li>The outside of the heating base may be cleaned with a soft cloth and warm, soapy water. Wipe dry. Do not use abrasive cleaners</li>
+                    <p class="text"><u>CAUTION:</u> Never immerse the heating base in water or other liquid.</p>
+                    <li>No other servicing should be performed.</li>
+                    <li>This appliance has no user serviceable parts. Any servicing beyond that described in the Cleaning Section should be performed by an Authorized Service Representative only. See Warranty Section.</li>
+                </ul>
+            </article>
+        </section >
+        <section class="main-section" id="HINTS_AND_TIPS">
+            <header class="article-header" id="7">HINTS AND TIPS</header>
+            <article >
+                <p class="text bold-text">PASTA AND RICE</p>
+                <ul>
+                    <li>For best rice results, use long grain converted rice or a specialty rice as the recipe suggests. If the rice is not cooked completely after the suggested time, add an extra 1 to 1½ cups of liquid per cup of cooked rice and continue cooking for 20 to 30 minutes. </li>
+                    <li>For best pasta results, first partially cook the pasta in a pot of boiling water until just tender. Add the pasta to the Crock-Pot® slow cooker during the last 30 minutes of cook time.</li>
+                </ul>
+                <p class="text bold-text">BEANS</p>
+                <ul>
+                    <li>Beans must be softened completely before combining with sugar and/or acidic foods. Sugar and acid have a hardening effect on beans and will prevent softening.</li>
+                    <li>Dried beans, especially red kidney beans, should be boiled before adding to a recipe. </li>
+                    <li>Fully cooked canned beans may be used as a substitute for dried beans.</li>
+                </ul>
+                <p class="text bold-text">VEGETABLES</p>
+                <ul>
+                    <li>Many vegetables benefit from slow cooking and are able to develop their full flavor. They tend not to overcook in your slow cooker as they might in your oven or on your stovetop.</li>
+                    <li>When cooking recipes with vegetables and meat, place vegetables in slow cooker before meat. Vegetables usually cook slower than meat in the slow cooker.</li>
+                    <li>Place vegetables near the sides or bottom of the stoneware to facilitate cooking.</li>
+                </ul>
+                <p class="text bold-text">HERBS AND SPICES</p>
+                <ul>
+                    <li>Fresh herbs add flavor and color, but should be added at the end of the cooking cycle as the flavor will dissipate over long cook times.</li>
+                    <li>Ground and/or dried herbs and spices work well in slow cooking and may be added at the beginning. </li>
+                    <li>Ground and/or dried herbs and spices work well in slow cooking and may be added at the beginning. </li>
+                </ul>
+                <p class="text bold-text">MILK</p>
+                <ul>
+                    <li>Milk, cream, and sour cream break down during extended cooking. When possible, add during the last 15 to 30 minutes of cooking.</li>
+                    <li>Condensed soups may be substituted for milk and can cook for extended times.</li>
+                </ul>
+                <p class="text bold-text">SOUPS</p>
+                <ul>
+                    <li>Some soup recipes call for large amounts of water. Add other soup ingredients to the slow cooker first then add water only to cover. If thinner soup is desired, add more liquid at serving time.</li>
+                </ul>
+                <p class="text bold-text"></p>
+                <ul>
+                    <li>Trim fat, rinse well, and pat meat dry with paper towels</li>
+                    <li>Browning meat in a separate skillet or broiler allows fat to be drained off before slow cooking and also adds greater depth of flavor.</li>
+                    <li>Meat should be positioned so that it rests in the stoneware without touching the lid.</li>
+                    <li>For smaller or larger cuts of meat, alter the amount of vegetables or potatoes so that the stoneware is always ½ to ¾ full.</li>
+                    <li>The size of the meat and the recommended cook times are just estimates and can vary depending upon the specific cut, type, and bone structure. Lean meats such as chicken or pork tenderloin tend to cook faster than meats with more connective tissue and fat such as beef chuck or pork shoulder. Cooking meat on the bone versus boneless will increase required cook times.</li>
+                    <li>Cut meat into smaller pieces when cooking with precooked foods such as beans or fruit, or light vegetables such as mushrooms, diced onion, eggplant, or finely minced vegetables. This enables all food to cook at the same rate.</li>
+                    <li>When cooking frozen meats, at least 1 cup of warm liquid must first be added. The liquid will act as a “cushion” to prevent sudden temperature changes. An additional 4 hours on LOW or 2 hours on HIGH is typically required. For larger cuts of frozen meat, it may take much longer to defrost and tenderize.</li>
+                </ul>
+                <p class="text bold-text">FISH</p>
+                <ul>
+                    <li></li>
+                </ul>
+                <p class="text bold-text">LIQUID</p>
+                <ul>
+                    <li>For best results and to prevent food from drying or burning, always ensure an adequate amount of liquid is used in the recipe. </li>
+                    <li>Ensure the stoneware is always filled a minimum of ½ full and a maximum of ¾ full, and conform to recommended cook times. </li>
+                </ul>
+            </article>
+        </section> 
+        <section class="main-section" id="CONTACTS">
+            <header class="article-header" id="8">CONTACTS</header>
+            <article>
+                <p class="bold-text" style="align-self: center; text-align: center;">Visit the Crock-Pot® slow cooker website at
+                    www.crockpot.com for additional hints, tips
+                    and recipes or call 1-800-323-9519.</p>
+            </article>
+        </section >
+        <section class="main-section" id="RECIPES">
+            <header class="article-header" id="9">RECIPES</header>
+            <article>
+                <code>
+                    <header class="recipe-header">CHILI</header>
+                    <table class="recipe-elements">
+                        <tr class="elements">
+                            <td class="elements">2 large onions, chopped</td>
+                            <td class="elements">5-6 cloves garlic, minced</td>
+                        </tr>
+                        <tr class="elements">
+                            <td class="elements">2 green peppers, chopped</td>
+                            <td class="elements">1 teaspoon cayenne pepper</td>
+                        </tr>
+                        <tr class="elements">
+                            <td class="elements" >½ cup beef broth </td>
+                            <td class="elements">14-ounce can diced tomatoes</td>
+                        </tr>
+                        <tr class="elements">
+                            <td class="elements">2 jalapeños, seeded and minced</td>
+                            <td class="elements"> 1 tablespoon cumin</td>
+                        </tr>
+                        <tr class="elements">
+                            <td class="elements">2-3 pounds ground beef, cooked and drained</td>
+                            <td class="elements">2 14-ounce cans red, black or white beans,
+                                rinsed and drained </td>
+                        </tr>
+                    </table>
+                    <p class="recipe-plot">
+                        <ol>
+                            <li>Add all ingredients to Crock-Pot® slow cooker.</li>
+                            <li>Cover and cook on Low for 8-9 hours or on High for 4-5 hours.</li>
+                        </ol>
+                    </p>
+                </code>
+                <code>
+                    <header class="recipe-header">POT ROAST</header>
+                    <table class="recipe-elements">
+                        <tr class="elements">
+                            <td class="elements">3 onions, sliced </td>
+                            <td class="elements">½ cup flour </td>
+                            <td class="elements">Kosher salt and pepper</td>
+                        </tr>
+                        <tr class="elements">
+                            <td class="elements">3 carrots, sliced </td>
+                            <td class="elements">3 potatoes, quartered</td>
+                            <td class="elements">2-4 pound beef chuck pot roast</td>
+                        </tr>
+                        <tr class="elements">
+                            <td class="elements">2 stalks celery, sliced</td>
+                            <td class="elements">1 cup mushrooms, sliced</td>
+                            <td class="elements">1 cup beef broth or wine</td>
+                        </tr>
+                    </table>
+                    <p class="recipe-plot">
+                        <ol class="article-list">
+                            <li>Coat roast with ½ cup flour, salt, and pepper. Sear roast in a skillet on stovetop (optional).</li>
+                            <li>Place all vegetables in Crock-Pot® slow cooker, except mushrooms. Add roast and spread mushrooms on top. Pour in liquid.</li>
+                            <li>Cover and cook on Low for 10-12 hours or on High for 6-8 hours, or until tender.</li>
+                        </ol>
+                    </p>
+                </code>
+                <code>
+                    <header class="recipe-header">BABY BACK RIBS</header>
+                    <table class="recipe-elements">
+                        <tr class="elements">
+                            <td class="elements">2-4 racks of baby back ribs</td>
+                            <td class="elements"> </td>
+                        </tr>
+                        <tr class="elements">
+                            <td class="elements">2-4 cups barbecue sauce</td>
+                            <td class="elements">2-3 onions, chopped</td>
+                        </tr>
+                    </table>
+                    <p class="recipe-plot">
+                        <ol class="article-list">
+                            <li>Place ribs in Crock-Pot® slow cooker. Top with onion and barbecue sauce. </li>
+                            <li>Cover and cook on Low for 7-9 hours or on High for 4-5 hours, or until meat is tender. </li>
+                            <li>To serve, cut ribs between bones and coat with extra sauce as desired.</li>
+                        </ol>
+                    </p>
+                </code>
+                <code>
+                    <header class="recipe-header">BBQ PULLED PORK</header>
+                    <table class="recipe-elements">
+                        <tr class="elements">
+                            <td class="elements">2½-5 pound pork loin, trimmed of fat</td>
+                            <td class="elements">2-4 cups barbecue sauce </td>
+                        </tr>
+                        <tr class="elements">
+                            <td class="elements">2-3 onions, chopped</td>
+                            <td class="elements">6-8 hamburger buns or hard rolls</td>
+                        </tr>
+                    </table>
+                    <p class="recipe-plot">
+                        <ol class="article-list">
+                            <li>Place pork loin in Crock-Pot® slow cooker. Top with onion and barbecue sauce. </li>
+                            <li>Cover and cook on Low for 7-9 hours or on High for 4-5 hours, or until meat is tender. </li>
+                            <li>Remove pork from Crock-Pot® slow cooker and shred with a fork. Add pork back into Crock-Pot® slow cooker and coat with sauce.</li>
+                            <li>Serve BBQ pulled pork on hamburger buns or hard rolls</li>
+                        </ol>
+                    </p>
+                    
+                </code>
+                <code>
+                    <header class="recipe-header">LEMON HERB ROASTED CHICKEN</header>
+                    <table class="recipe-elements">
+                        <tr class="elements">
+                            <td class="elements">4-6 pound roasting chicken</td>
+                            <td class="elements">½ cup onion, chopped</td>
+                            <td class="elements">1-2 tablespoons butter</td>
+                            <td class="elements">Juice of one lemon</td>
+                        </tr>
+                        <tr class="elements">
+                            <td class="elements">½ teaspoon Kosher salt</td>
+                            <td class="elements">2 tablespoons fresh parsley</td>
+                            <td class="elements">½ teaspoon dried thyme</td>
+                            <td class="elements">⅓ teaspoon paprika</td>
+                        </tr>
+                    </table>
+                    <p class="recipe-plot">
+                        <ol class="article-list">
+                            <li>Place the onion in the cavity of the chicken and rub the skin with butter. Place chicken in Crock-Pot® slow cooker.</li>
+                            <li>Squeeze lemon juice over chicken and sprinkle with remaining seasonings. Cover and cook on Low 8-10 hours or on High 4-5 hours.</li>
+                            
+                        </ol>
+                    </p>
+                </code>
+            </article>
+</section>
+        </main>
+    </body>
+</html>
